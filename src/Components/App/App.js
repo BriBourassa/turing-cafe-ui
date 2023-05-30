@@ -19,17 +19,22 @@ const App = () => {
     setAllRes([...allRes, newRes])
   }
 
+  const deleteRes = (id) => {
+    const filteredRes = allRes.filter(res => res.id !== id)
+    setAllRes(filteredRes)
+  }
+
 
 
   return (
     <div className="App">
       <h1 className="app-title">Turing Cafe Reservations</h1>
       <div className="resy-form">
-        <Form addRes={addRes}/>
+        <Form addRes={addRes} />
       </div>
 
       <div className="resy-container">
-        <ResList allRes={allRes}/>
+        <ResList allRes={allRes} deleteRes={deleteRes}/>
       </div>
     </div>
   );

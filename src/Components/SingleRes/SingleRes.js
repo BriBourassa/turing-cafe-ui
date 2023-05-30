@@ -2,7 +2,7 @@ import React from "react";
 import './SingleRes.css'
 
 
-const SingleRes = ({ resData }) => {
+const SingleRes = ({ resData, deleteRes }) => {
     const {id, name, date, time, number} = resData
 
     return (
@@ -11,7 +11,7 @@ const SingleRes = ({ resData }) => {
           <p>{date}</p>
           <p>{time}</p>
           <p>Number of Guests: {number}</p>
-          <button>Cancel</button>
+          <button onClick={deleteRes}>Cancel</button>
         </div>
     )
 

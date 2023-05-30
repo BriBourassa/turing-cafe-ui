@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import './Form.css'
 
 const Form = ({ addRes }) => {
     const [formData, setFormData] = useState({
@@ -39,6 +39,27 @@ const Form = ({ addRes }) => {
                 placeholder="Name"
                 name="name"
                 value={formData.name}
+                onChange={handleChange}
+            />
+              <input
+                type="text"
+                placeholder="Date"
+                name="date"
+                value={formData.date}
+                onChange={handleChange}
+            />
+              <input
+                type="text"
+                placeholder="Time"
+                name="time"
+                value={formData.time}
+                onChange={handleChange}
+            />
+              <input
+                type="text"
+                placeholder="Number"
+                name="number"
+                value={formData.number}
                 onChange={handleChange}
             />
 

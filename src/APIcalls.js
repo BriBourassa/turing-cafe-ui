@@ -8,7 +8,7 @@ const getAllReservations = async (setAllRes) => {
         }
         const data = await response.json();
         setAllRes(data)
-        console.log(data)
+        // console.log(data)
     } catch (err) {
         console.log('oh nourr', err)
     }
