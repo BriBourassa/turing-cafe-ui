@@ -1,6 +1,6 @@
 const url = `http://localhost:3001/api/v1/reservations`
 
-const getAllReservations = async (setAllRes) => {
+const getAllReservations = async (setAllRes, setError) => {
     try {
         const response = await fetch(url);
         if(!response.ok) {
@@ -8,14 +8,10 @@ const getAllReservations = async (setAllRes) => {
         }
         const data = await response.json();
         setAllRes(data)
-        // console.log(data)
-    } catch (err) {
-        console.log('oh nourr', err)
+    } catch (error) {
+        console.log('oh nourr', error)
+        setError(error)
     }
-    // ask about moving catch into App!
-
-
-
 }
 
 export { getAllReservations }

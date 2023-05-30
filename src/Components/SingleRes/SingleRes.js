@@ -11,7 +11,7 @@ const SingleRes = ({ resData, deleteRes }) => {
           <p>{date}</p>
           <p>{time}</p>
           <p>Number of Guests: {number}</p>
-          <button onClick={deleteRes}>Cancel</button>
+          <button onClick={() => deleteRes(id)}>Cancel</button>
         </div>
     )
 

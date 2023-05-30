@@ -2,7 +2,6 @@ import React from "react";
 import './ResList.css'
 import SingleRes from '../SingleRes/SingleRes';
 
-
 const ResList = ({ allRes, deleteRes }) => {
 // console.log(allRes, 'line 7')
     const mappedRes = allRes.map((res) => {
@@ -17,11 +16,9 @@ const ResList = ({ allRes, deleteRes }) => {
 
 return(
     <section className="res-container">
-        
         {mappedRes}
     </section>
-)
-
+    )
 }
 
 export default ResList

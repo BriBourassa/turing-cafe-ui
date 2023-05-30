@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import './Form.css'
 
-const Form = ({ addRes }) => {
+const Form = ({ addRes, postNewRes }) => {
     const [formData, setFormData] = useState({
         name: '',
         date: '',
@@ -20,6 +20,7 @@ const Form = ({ addRes }) => {
             ...formData
         }
         addRes(newRes)
+        postNewRes(newRes)
         clearInputs()
     }
 
@@ -62,15 +63,9 @@ const Form = ({ addRes }) => {
                 value={formData.number}
                 onChange={handleChange}
             />
-
         <button onClick={handleSubmit}>Make Reservation</button>
         </form>
     )
-
-
-
-}
-
-
+};
 
 export default Form
