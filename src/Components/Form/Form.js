@@ -1,32 +1,50 @@
 import React, { useState } from "react";
 
 
-const Form = () => {
-    const [newRes, setNewRes] = useState({
-        id:Date.now(),
+const Form = ({ addRes }) => {
+    const [formData, setFormData] = useState({
         name: '',
         date: '',
         time: '',
-        number: ''
+        number: 0
     })
 
+    const handleChange = (e) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+      };
 
     const handleSubmit = e => {
         e.preventDefault()
-        const makeNewRes = {
-            id: Date.now(),
-            name: name,
-            date: date,
-            time: time,
-            number: number
+        const newRes = {
+            id:Date.now(),
+            ...formData
         }
-        addRes(makeNewRes)
+        addRes(newRes)
         clearInputs()
     }
 
     const clearInputs = () => {
-        
+        setFormData({
+            name: '',
+            date: '',
+            time: '',
+            number: 0
+        })
     }
+
+    return (
+        <form>
+            <input
+                type="text"
+                placeholder="Name"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+            />
+
+        <button onClick={handleSubmit}>Make Reservation</button>
+        </form>
+    )
 
 
 
