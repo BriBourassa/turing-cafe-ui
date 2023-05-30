@@ -1,0 +1,14 @@
+.single-card {
+    border: .3rem solid teal;
+    color: teal;
+    font-weight: 600;
+    border-radius: .2rem;
+    margin: 1rem;
+    padding: .5rem;
+    background-color: aliceblue;
+}
+
+button {
+    color: white;
+    background-color: teal;
+}
