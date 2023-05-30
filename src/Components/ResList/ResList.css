@@ -3,3 +3,14 @@
     flex-wrap: wrap;
     padding: 1rem;
 }
+
+.oops {
+    border: .3rem solid teal;
+    color: teal;
+    font-weight: 600;
+    border-radius: .2rem;
+    margin: 1rem;
+    margin-top: 3rem;
+    padding: .5rem;
+    background-color: aliceblue;
+}
